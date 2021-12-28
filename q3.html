@@ -1,0 +1,30 @@
+<!DOCTYPE >
+<html>
+  <head>
+    <title>Jquery test</title>
+    <script
+      src="https://code.jquery.com/jquery-3.6.0.min.js"
+      integrity="sha256-/xUj+3OJU5yExlq6GSYGSHk7tPXikynS7ogEvDej/m4="
+      crossorigin="anonymous"
+    ></script>
+  </head>
+  <body>
+    <div id="divMessage">
+      jQuery is a lightweight, "write less, do more", JavaScript library
+    </div>
+    <br /><br />
+    <span>jQuery greatly simplifies JavaScript programming</span><br /><br />
+
+    <input id="btn" name="btn" type="button" value="Submit" />
+
+    <script>
+      $(document).ready(function () {
+        $("#btn").click(function () {
+          $("div#divMessage").text(
+            "I studied changing the value of DIV using jQuery"
+          );
+        });
+      });
+    </script>
+  </body>
+</html>

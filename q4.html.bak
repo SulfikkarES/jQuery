@@ -1,0 +1,44 @@
+
+<html>
+	<head>
+		
+		<title>Jquery test</title>
+		<script src="http://code.jquery.com/jquery-1.9.1.js"></script>
+
+	<script>
+	{
+	function test()
+		{
+		alert("testing");
+		}
+	
+	}
+	</script>
+	
+	</head>
+	
+	<body>
+	
+		<table cellpadding="0" cellspacing="0" border="1">
+		
+			<tr><td> Item 1</td></tr>
+			<tr><td> Item 2</td></tr>
+			<tr><td> Item 3</td></tr>
+			<tr><td> Item 4</td></tr>
+			<tr><td> Item 5</td></tr>
+			<tr><td> Item 6</td></tr>
+			<tr><td> Item 7</td></tr>
+			<tr><td> Item 8</td></tr>
+			<tr><td> Item 9</td></tr>
+			<tr><td id="item10"> Item 10</td></tr>
+			<tr><td> Item 11</td></tr>
+			<tr><td> Item 12</td></tr>
+									
+		</table>
+	
+	<br/>
+
+	<input id="btn" name="btn" type="button" value="Submit" onclick="test()"/>
+
+	</body>
+</html>

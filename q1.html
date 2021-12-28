@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>Jquery test</title>
+    <script
+      src="https://code.jquery.com/jquery-3.6.0.min.js"
+      integrity="sha256-/xUj+3OJU5yExlq6GSYGSHk7tPXikynS7ogEvDej/m4="
+      crossorigin="anonymous"
+    ></script>
+  </head>
+  <body>
+    Username : <input id="txtInput" name="txtname" type="text" /> Password :
+    <input id="txtpass" name="txtpass" type="password" />
+    <input id="btn" name="btn" type="button" value="Submit" />
+
+    <script type="text/javascript">
+      $(document).ready(function () {
+        $("#btn").click(function () {
+          alert($("#txtInput").val());
+          $("#txtInput").val("");
+        });
+      });
+    </script>
+  </body>
+</html>

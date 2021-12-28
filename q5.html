@@ -1,0 +1,53 @@
+<!DOCTYPE >
+<html>
+  <head>
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+    <title>Jquery test</title>
+    <script
+      src="https://code.jquery.com/jquery-3.6.0.min.js"
+      integrity="sha256-/xUj+3OJU5yExlq6GSYGSHk7tPXikynS7ogEvDej/m4="
+      crossorigin="anonymous"
+    ></script>
+    <script
+      src="https://code.jquery.com/ui/1.13.0/jquery-ui.min.js"
+      integrity="sha256-hlKLmzaRlE8SCJC1Kw8zoUbU8BxA+8kR3gseuKfMjxA="
+      crossorigin="anonymous"
+    ></script>
+  </head>
+
+  <body>
+    <input id="btn" name="btn" type="button" value="Submit" /><br /><br />
+
+    <div id="box1" style="border: 1px solid blue; width: 200px; height: 200px">
+      BOX 1
+    </div>
+
+    <br />
+
+    <div id="box2" style="border: 1px solid red; width: 200px; height: 200px">
+      BOX 2
+    </div>
+
+    <script>
+      $(document).ready(function () {
+        $("#btn").draggable({
+          cancel: false,
+          revert: "valid",
+        });
+        $("#box1").droppable({
+          accept: "#btn",
+          drop: function (event, ui) {
+            $("#box1").append(ui.draggable);
+          },
+        });
+        $("#box2").droppable({
+          drop: function (event, ui) {
+            if (ui.draggable.id === "btn") {
+              $("#box2").remove(ui.draggable);
+            }
+          },
+        });
+      });
+    </script>
+  </body>
+</html>
